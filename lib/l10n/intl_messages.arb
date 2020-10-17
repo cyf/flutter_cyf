@@ -1,0 +1,39 @@
+{
+  "@@last_modified": "2020-04-30T07:04:35.938228",
+  "title": "Love fa forever",
+  "@title": {
+    "description": "The title of app",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tabNewsTitle": "News",
+  "@tabNewsTitle": {
+    "description": "Title for News tab of bottom navigation.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tabPhotosTitle": "Photos",
+  "@tabPhotosTitle": {
+    "description": "Title for Photos tab of bottom navigation.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tabVideoTitle": "Video",
+  "@tabVideoTitle": {
+    "description": "Title for Video tab of bottom navigation.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tabWebViewTitle": "WebView",
+  "@tabWebViewTitle": {
+    "description": "Title for WebView tab of bottom navigation.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tabSettingsTitle": "Settings",
+  "@tabSettingsTitle": {
+    "description": "Title for Settings tab of bottom navigation.",
+    "type": "text",
+    "placeholders": {}
+  }
+}
