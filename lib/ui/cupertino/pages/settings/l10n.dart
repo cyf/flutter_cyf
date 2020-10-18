@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cyf/l10n/flutter_demo_localizations.dart';
 
 import 'package:flutter_redux/flutter_redux.dart';
 
-import 'package:flutter_cyf/common/mock/dark_modes.dart';
 import 'package:flutter_cyf/common/model/app_state.dart';
+import 'package:flutter_cyf/l10n/flutter_demo_localizations.dart';
 import 'package:flutter_cyf/ui/store/actions/actions.dart';
 
 class FL10n extends StatefulWidget {
