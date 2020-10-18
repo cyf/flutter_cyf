@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -20,36 +21,28 @@ class DarkMode extends StatefulWidget {
 class _DarkModeState extends State<DarkMode> {
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        middle: Text(widget.headerTitle ?? "DarkMode"),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.headerTitle ?? "DarkMode"),
       ),
-      child: StoreConnector<AppState, FThemeMode>(
+      body: StoreConnector<AppState, FThemeMode>(
         converter: (store) => store.state.darkMode,
         builder: (context, darkMode) => Container(
           margin: EdgeInsets.only(left: 6, right: 6),
           child: ListView.separated(
-            itemBuilder: (BuildContext context, int index) => GestureDetector(
-              onTap: () {
+            itemBuilder: (BuildContext context, int index) => RadioListTile<FThemeMode>(
+              groupValue: darkMode,
+              title: Text(
+                  darkModes[index]["title"],
+                  style: TextStyle(
+                    color: DarkModeUtil.isDarkMode(context, darkMode)
+                        ? CupertinoColors.white
+                        : CupertinoColors.black)),
+              value: darkModes[index]["mode"],
+              onChanged: (value) {
                 StoreProvider.of<AppState>(context).dispatch(
                     DarkModeAction(darkMode: darkModes[index]["mode"]));
               },
-              child: Container(
-                width: MediaQuery.of(context).size.width,
-                height: 48,
-                child: Row(
-                  children: <Widget>[
-                    Text(
-                      darkModes[index]["title"],
-                      style: TextStyle(
-                        color: DarkModeUtil.isDarkMode(context, darkMode)
-                            ? CupertinoColors.white
-                            : CupertinoColors.black,
-                      ),
-                    )
-                  ],
-                ),
-              ),
             ),
             separatorBuilder: (context, index) => Container(
               height: 1,
