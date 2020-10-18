@@ -117,11 +117,11 @@ class AuthorState extends State<Author> {
                       tooltip: 'GitHub',
                       onPressed: () {
                         _scaffoldKey.currentState.showSnackBar(const SnackBar(
-                          content: Text('https://github.com/chenyifaerfans.'),
+                          content: Text('https://github.com/cyf.'),
                         ));
                       },
                       lines: const <String>[
-                        'https://github.com/chenyifaerfans',
+                        'https://github.com/cyf',
                         'GitHub',
                       ],
                     ),
@@ -130,7 +130,7 @@ class AuthorState extends State<Author> {
                       tooltip: 'Gitee',
                       onPressed: () {
                         _scaffoldKey.currentState.showSnackBar(const SnackBar(
-                          content: Text('https://gitee.com/chenyifaerfans.'),
+                          content: Text('https://gitee.com/cyf.'),
                         ));
                       },
                       lines: const <String>[

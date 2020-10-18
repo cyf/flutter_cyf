@@ -96,7 +96,7 @@ void showDemoAboutDialog(BuildContext context) {
               ),
               _LinkTextSpan(
                 style: linkStyle,
-                url: 'https://github.com/chenyifaerfans/chenyifaerfans-flutter',
+                url: 'https://github.com/cyf/flutter_cyf',
                 text: 'github repo',
               ),
               TextSpan(
