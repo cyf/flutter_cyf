@@ -33,7 +33,7 @@ dependencies:
   intl: ^0.16.0
   intl_translation: ^0.17.9
   flutter_localized_locales: ^1.1.1
-  redux_persist_flutter: ^0.8.2
+  redux_persist_flutter: ^0.8.3
   flutter_redux: ^0.6.0
   redux_thunk: ^0.3.0
   redux_logging: ^0.4.0
@@ -55,11 +55,11 @@ dependencies:
   md2_tab_indicator: ^1.0.2
   webview_flutter: ^1.0.3
   reorderables: ^0.3.2
-#  flutter_native_splash: ^0.1.9
   intro_slider: ^2.3.3
   cached_network_image: ^2.2.0+1
   flutter_screenutil: ^3.1.1
   fluttertoast: ^7.1.1
+  lottie: ^0.7.0+1
 
 dev_dependencies:
   flutter_test:
