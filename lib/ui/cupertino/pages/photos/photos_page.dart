@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
+import 'package:lottie/lottie.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
@@ -120,7 +121,16 @@ class _PhotosPageState extends State<PhotosPage> {
             ),
           ],
         ),
-      ) : Container(),
+      ) : Center(
+        child: SizedBox(
+          width: 80,
+          height: 80,
+          child: Lottie.asset(
+            "assets/animations/loading.json",
+            repeat: true,
+          ),
+        ),
+      ),
     );
   }
 

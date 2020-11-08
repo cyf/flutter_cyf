@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 
+import 'package:lottie/lottie.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import 'package:flutter_cyf/common/app_manager.dart';
@@ -81,6 +82,18 @@ class _WebViewPageState extends State<WebViewPage> {
               },
               gestureNavigationEnabled: true,
             ),
+          ),
+          Positioned(
+            child: _loading ? Center(
+              child: SizedBox(
+                width: 80,
+                height: 80,
+                child: Lottie.asset(
+                  "assets/animations/loading.json",
+                  repeat: true,
+                ),
+              ),
+            ) : Container(),
           ),
           if (lastSelectedValue != null)
             Positioned(

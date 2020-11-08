@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'package:lottie/lottie.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:flutter_page_indicator/flutter_page_indicator.dart';
@@ -89,7 +90,16 @@ class _NewsState extends State<News> {
                             lastItem: index == _news?.length - 1,
                           ),
                         )
-                      : Container()
+                      : Center(
+                          child: SizedBox(
+                            width: 80,
+                            height: 80,
+                            child: Lottie.asset(
+                              "assets/animations/loading.json",
+                              repeat: true,
+                            ),
+                          ),
+                        )
                   : Center(
                       child: Container(
                         child: Text(
